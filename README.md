@@ -1,6 +1,6 @@
-# CS361
+# CS361 Tax Information Project
 CS361 Repository
-Test Commit
+
 
 
 How to run:
