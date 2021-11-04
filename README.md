@@ -10,7 +10,7 @@ How to run:
 1. Open terminal and type 
 ```cd /Users/Documents``` (or wherever else you want to save the project)
 2. Then type 
-```git clone https://github.com/reyejona/cs361-project.git ```
+```git clone https://github.com/reyejona/taxrateAPI.git ```
 to clone the project into that folder
 
 3. to install dependencies (Mac OS) type 
