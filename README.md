@@ -38,13 +38,13 @@ and Boom! It should run on port 5000
 
 ## Running the application
 To search for a state using a POST request
-1. Click on >"search for a state sales tax rate" 
+1. Click on > "search for a state sales tax rate" 
 2. Type in 2 letter state abbreviation i.e. "CA" = California
 3. State should be displayed as a json object
 
 
 To translate a language
-1. Click on  >"translate text to a different language"
+1. Click on  > "translate text to a different language"
 2. Type in your language as a string "FR" for french, "ES" for spanish, "CH" for Chinese etc.
 3. Type in the text you want to translate.
 4. Hit the submit button!
