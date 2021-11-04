@@ -4,6 +4,8 @@ Test Commit
 
 
 How to run:
+##Make sure you have python3 installed on your computer.
+
 
 1. Open terminal and type 
 ```cd /Users/Documents``` (or wherever else you want to save the project)
