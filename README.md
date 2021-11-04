@@ -13,12 +13,14 @@ How to run:
 ```git clone https://github.com/reyejona/taxrateAPI.git ```
 to clone the project into that folder
 
-3. to install dependencies (Mac OS) type 
+3. move to the taxrateAPI folder in the directory
+ ```cd taxrateAPI```
+
+5. To install dependencies (Mac OS) type 
 ```python3 -m pip install -r requirements.txt```
 
-4. Run 
+4. To install virtual enviornment Run 
 ```pip3 install virtualenv``` 
-to install the virtual environment
 
 5. Then run 
 ```python3 -m venv ./venv```
