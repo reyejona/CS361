@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends "home.html" %}
+{% block content %}
+
+
+<form action ="/form" method="POST">
+    <h4>Enter State as 2 Letter Abbreviation. i.e. TX for Texas</h4>
+    <p><input type="text" name ="state"></p>
+    <p><input type="submit" value = "submit"></p>
+</form>
+
+{% endblock %}
