@@ -4,7 +4,7 @@ Test Commit
 
 
 How to run:
-##Make sure you have python3 installed on your computer.
+## Make sure you have python3 installed on your computer.
 
 
 1. Open terminal and type 
