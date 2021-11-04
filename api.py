@@ -208,7 +208,7 @@ states =  [
 ]
 
 
-
+# Route for Home page
 @app.route('/', methods=['GET'])
 def my_form():
     return render_template('home.html')
@@ -219,7 +219,7 @@ def my_form():
 def api_all():
     return jsonify(states)
 
-
+# GET request in the URL for specific state
 @app.route('/states/<string:state>', methods=['GET'])
 def returnOne(state):
     theOne = states[0]
@@ -230,7 +230,7 @@ def returnOne(state):
 
 
 
-# allow both GET and POST requests
+# Route for form data handling
 @app.route('/form', methods=['GET', 'POST'])
 def form():
         # handle the POST request
@@ -240,7 +240,7 @@ def form():
     else:
         return render_template("form.html")
 
-# allow both GET and POST requests
+# Route for translation microservice
 @app.route('/translate', methods=['GET', 'POST'])
 def translate():
     # handle the POST request
@@ -260,5 +260,4 @@ def translate():
 
 
 if __name__ == '__main__':
-    app.debug= True
-    app.run(host='localhost', port=5000)
+    app.run(debug=True)
