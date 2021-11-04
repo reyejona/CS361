@@ -26,13 +26,9 @@ to install the virtual environment
 6. Now, activate the virtual environment by running 
 ```source ./venv/bin/activate```
 
-7. Run 
-```source ./venv/bin/activate``` 
-again to activate the virtual environment
-
-8. Finally, run 
+7. Finally, run 
 ``` export FLASK_APP=api```
 
-9. then 
+8. then 
 ``` flask run``` 
 and Boom! It should run on port 5000
