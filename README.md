@@ -34,3 +34,27 @@ to clone the project into that folder
 8. then 
 ``` flask run``` 
 and Boom! It should run on port 5000
+
+
+## Running the application
+To search for a state using a POST request
+1. Click on "search for a state sales tax rate" to lookup a state
+2. Type in 2 letter state abbreviation i.e. "CA" = California
+3. State should be displayed as a json object
+
+
+To translate a language
+1. Click on  "translate text to a different language"
+2. Type in your language as a string "FR" for french, "ES" for spanish, "CH" for Chinese etc.
+3. Type in the text you want to translate.
+4. Hit the submit button!
+5. It should return translated text.
+
+To display all states
+1. Go to ```http://127.0.0.1:5000/states/```
+2. It will display all states as a json dictionary
+
+To search for 1 state using a GET request through the URL
+1. Type in ```http://127.0.0.1:5000/states/<state_abbreviation>```
+2. Where <state_abbreviation> is a 2 letter state abbreviation ie Texas is "TX"
+3. It will display state information as a json object.
