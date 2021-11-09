@@ -4,7 +4,9 @@
     <script type="text/javascript">
         var form = document.getElementById("form")
         
-    
+        
+
+
         function changeText2(){
             console.log("Called Function");
             var language = document.getElementById("language").value;
@@ -14,13 +16,14 @@
             
             // language.disabled = true;
             // textInput.disabled = true;
-            var url= 'http://localhost:3005/translate/' + language + '/' + textInput;
+            var myurl= 'http://localhost:3005/translate/' + language + '/' + textInput;
             //window.open(action_src, '_blank');
-            console.log(url);
-            window.location.href= 'http://localhost:3005/translate/' + language + '/' + textInput;
+            //console.log(url);
+            //window.location.href= 'http://localhost:3005/translate/' + language + '/' + textInput;
 
             var req = new XMLHttpRequest(); 
-            req.open( 'GET', "http://localhost:3005/translate/" + language + "/" + textInput, true);
+            var url = myurl;
+            req.open( 'GET', myurl, true);
             req.onreadystatechange = function() {
                 
                 if(req.readyState== XMLHttpRequest.DONE) {
@@ -30,8 +33,7 @@
                     console.log(typeof req.response);
                     console.log(req.responseText)
                     let jsonResponse = JSON.parse(req.responseText);
-                    // var table = document.getElementById("form");
-                    // var res = document.getElementById("p")
+                    document.getElementById("response").innerHTML = jsonResponse.newText
 
                 }   else {
                     console.log("Error");
@@ -50,7 +52,7 @@
     {% extends "home.html" %}
     {% block content %}
     <div>
-        <form id="form" onsubmit="changeText2()">
+        <form id="form" onsubmit="changeText2(); return false;">
             <h3>
                 Spanish, French, English, Chinese
                 <li>es - Spanish</li>
@@ -60,13 +62,31 @@
             </h3>
             <div><label>Language: </label><input type="text" id = "language" name="language"></div>
             <div><label>Text:</label> <input type="text" id = "textInput" name="textInput"></div>
-            <input type='submit' value='Translate'/>
+            <input type='submit' value='Translate' id="translate"/>
     
-        <p id="response">Results: </p>
-    </form>
     </div>
+        
+    </form>
+
+    <p></p>
+    <p></p>
+    <p></p>
+    <p><h2>Here is the response:</h2></p>
+    <H1><div id="response"><h2></h2>  </h2></div></H1>
+    
+    
     
     {% endblock %}
+
+
+
+</body>
+
+
+
+ 
+
+
 
 
 
