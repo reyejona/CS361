@@ -241,22 +241,10 @@ def form():
         return render_template("form.html")
 
 # Route for translation microservice
-@app.route('/translate', methods=['GET', 'POST'])
+@app.route('/translate', methods=['GET'])
 def translate():
-    # handle the POST request
-    if request.method == 'POST':
-        language = request.form.get('language')
-        text = request.form.get('text')
-        return '''
-                  <h1>The language value is: {}</h1>
-                  <h1>The text value is: {}</h1>'''.format(language, text)
-    # otherwise handle the GET request
-    return '''
-           <form method="POST">
-               <div><label>Language: <input type="text" name="language"></label></div>
-               <div><label>Text: <input type="text" name="text"></label></div>
-               <input type="submit" value="Submit">
-           </form>'''
+    return render_template('translate.html')
+
 
 
 if __name__ == '__main__':
