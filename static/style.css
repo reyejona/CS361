@@ -1,13 +1,43 @@
-html{
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-    font-size: 17px;
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@400;700&display=swap");
+:root {
+  --turtle-gray: #f59e0b;
 }
 
-body{
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+body {
+  font-family: "monaco";
+  margin: 0px;
 }
-.form_fieldset {
-    
+
+.nav-bar{
+    font-weight: bolder;
+    font-size: xx-large;
+    background-color: var(--turtle-gray);
+    max-width: 100%;
+    height: 5rem;
+    padding-top: 2rem;
+    border-bottom-left-radius: 1rem;
+}
+.container {
+  max-width: 80%;
+  margin: auto;
+  margin-bottom: 20rem;
+}
+.container #btn {
+  background-color: var(--turtle-gray);
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  margin: 2rem 2rem;
+  font-size: large;
+  font-weight: bold;
+}
+
+.container #btn2 {
+  background-color: var(--turtle-gray);
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  margin: 2rem 2rem;
+  font-size: large;
+  font-weight: bold;
 }
