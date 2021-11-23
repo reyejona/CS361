@@ -3,27 +3,24 @@
   <head>
     <title>US Sales Tax Rates</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <style type="text/css">
-      .container {
-        max-width: 500px;
-        padding-top: 100px;
-      }
-      h2 {color: red;}
-    </style>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    
+
   </head>
   <body>
+    <nav class="nav-bar">
+      <center>United States Tax Rates and Simple Translations</center>
+    </nav>
     <div class="container">
-      <h1>United States Tax Rates</h1><p>This site is a prototype API for finding US Sales Tax Rates.</p>
+      <p>This site is an API for finding US Sales Tax Rates, and doing simple translations.</p>
       <br>
       {% block content %}
-      <li><a href="/form"> Click here to search for a state sales tax rate</a></li>
-      <li><a href="/translate"> Click here to translate text to a different language</a></li>
+      <center><a href="/form"><button id="btn">Click here to search for a state sales tax rate</button></a></center>
+      <center><a href="/translate"><button id="btn2">Click here to translate text to a different language</button></a></center>
       {% endblock %}
       <br>
  
     </div>
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
   </body>
 </html>

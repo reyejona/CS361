@@ -6,20 +6,17 @@
         
         
 
-
+        //function to change form variables to URL input
         function changeText2(){
             console.log("Called Function");
+            //read the values from the HTML form
             var language = document.getElementById("language").value;
             console.log(language);
             var textInput = document.getElementById("textInput").value;
             console.log(textInput);
             
-            // language.disabled = true;
-            // textInput.disabled = true;
+            //create the full URL
             var myurl= 'http://localhost:3005/translate/' + language + '/' + textInput;
-            //window.open(action_src, '_blank');
-            //console.log(url);
-            //window.location.href= 'http://localhost:3005/translate/' + language + '/' + textInput;
 
             var req = new XMLHttpRequest(); 
             var url = myurl;
@@ -33,6 +30,7 @@
                     console.log(typeof req.response);
                     console.log(req.responseText)
                     let jsonResponse = JSON.parse(req.responseText);
+                    //output response to html
                     document.getElementById("response").innerHTML = jsonResponse.newText
 
                 }   else {
@@ -44,7 +42,7 @@
             req.send();
             
 
-            // form.action = action_src;
+            
         }
         </script>
 </head>
@@ -54,7 +52,7 @@
     <div>
         <form id="form" onsubmit="changeText2(); return false;">
             <h3>
-                Spanish, French, English, Chinese
+                Please Enter the language in the following manner:
                 <li>es - Spanish</li>
                 <li>fr - French</li>
                 <li>en - English</li>
@@ -73,22 +71,12 @@
     <p></p>
     <p><h2>Here is the response:</h2></p>
     <H1><div id="response"><h2></h2>  </h2></div></H1>
+    <div><a href="/">Go back to homepage</a></div>
     
-    
-    
+
     {% endblock %}
 
-
-
-</body>
-
-
-
- 
-
-
-
-
+    
 
 </body>
 
@@ -96,3 +84,8 @@
 
  
 
+
+
+
+
+</body>
