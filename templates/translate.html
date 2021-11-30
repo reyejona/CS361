@@ -24,18 +24,18 @@
             req.onreadystatechange = function() {
                 
                 if(req.readyState== XMLHttpRequest.DONE) {
-                var status = req.status;
-                if (status===0 || status >=200 && status <400) {
-                    console.log("request made");
-                    console.log(typeof req.response);
-                    console.log(req.responseText)
-                    let jsonResponse = JSON.parse(req.responseText);
-                    //output response to html
-                    document.getElementById("response").innerHTML = jsonResponse.newText
+                    var status = req.status;
+                    if (status===0 || status >=200 && status <400) {
+                        console.log("request made");
+                        console.log(typeof req.response);
+                        console.log(req.responseText)
+                        let jsonResponse = JSON.parse(req.responseText);
+                        //output response to html
+                        document.getElementById("response").innerHTML = jsonResponse.newText
 
-                }   else {
-                    console.log("Error");
-                }
+                    }   else {
+                        console.error("Error");
+                        }
                 }
                 
             }
@@ -50,6 +50,7 @@
     {% extends "home.html" %}
     {% block content %}
     <div>
+        <!-- return false is needed to cancel the default submit behavior and use the JS function -->
         <form id="form" onsubmit="changeText2(); return false;">
             <h3>
                 Please Enter the language in the following manner:
@@ -77,15 +78,5 @@
     {% endblock %}
 
     
-
-</body>
-
-
-
- 
-
-
-
-
 
 </body>
