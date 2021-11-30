@@ -233,7 +233,6 @@ def returnOne(state):
 # Route for form data handling
 @app.route('/form', methods=['GET', 'POST'])
 def form():
-        # handle the POST request
     if request.method == 'POST':
         state = request.form.get("state")
         return redirect(url_for('returnOne', state=state))
@@ -244,6 +243,7 @@ def form():
 @app.route('/translate', methods=['GET'])
 def translate():
     return render_template('translate.html')
+
 
 
 
